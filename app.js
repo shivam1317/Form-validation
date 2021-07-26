@@ -1,4 +1,3 @@
-console.log("Welcome to project 4");
 
 // we will validate name,phone and address
 let fname = document.getElementById('name');
@@ -10,10 +9,10 @@ let emailValid = false;
 let phoneValid = false;
 
 fname.addEventListener('blur',()=>{
-    console.log("name blurred!");
+    
     let regex = /^([a-zA-Z])([0-9a-zA-Z]){2,10}$/;
     let str = fname.value;
-    console.log(regex,str);
+ 
     if(regex.test(str)){
         fname.classList.add('is-valid');
         fname.classList.remove('is-invalid');
@@ -26,10 +25,10 @@ fname.addEventListener('blur',()=>{
 })
 
 email.addEventListener('blur',()=>{
-    console.log("email blurred!");
+    
     let regex = /^([_a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$/;
     let str = email.value;
-    console.log(regex,str);
+    
     if(regex.test(str)){
         email.classList.add('is-valid');
         email.classList.remove('is-invalid');
@@ -42,10 +41,10 @@ email.addEventListener('blur',()=>{
 })
 
 phone.addEventListener('blur',()=>{
-    console.log("phone blurred!");
+    
     let regex = /^([0-9]){10}$/;
     let str = phone.value;
-    console.log(regex,str);
+    
     if(regex.test(str)){
         phone.classList.add('is-valid');
         phone.classList.remove('is-invalid');
